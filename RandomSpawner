@@ -1,0 +1,30 @@
+while true do
+    wait(math.random(1, 5))
+    local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
+
+    local entity = Creator.createEntity({
+        Model = "https://github.com/Noobyxd/Depth/blob/main/Models/DepthV2.rbxm",
+        Speed = 200,
+        DelayTime = 2,
+        HeightOffset = 0,
+        CanKill = true,
+        BreakLights = true,
+        FlickerLights = {
+            true,
+            5,
+        },
+        Cycles = {
+            Min = 6,
+            Max = 10,
+            WaitTime = 5,
+        },
+        CamShake = {
+            true,
+            {5, 15, 0.1, 1},
+            100,
+        },
+        CustomDialog = {"You Died to depth...", "Depth is rare but if he is in ur game he spawn randomly...", "When the lights flicker Hide!", "Beware He Can Come Back more times!", ""}
+    })
+
+    Creator.runEntity(entity)
+end
